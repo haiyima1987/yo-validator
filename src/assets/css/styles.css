@@ -1,0 +1,312 @@
+:root {
+    --yo-v-font-family: 'Open Sans';
+    --yo-v-placeholder: #ABACAD;
+    --yo-v-title: #303437;
+    --yo-v-border: #ABACAD;
+    --yo-v-background: white;
+    --yo-v-background-grey: #D6D7D8;
+    --yo-v-text: #303437;
+    --yo-v-text-hover: #303437;
+    --yo-v-text-selected: #303437;
+    --yo-v-error: #FF2151;
+    --yo-v-primary-color: #66974F;
+}
+
+/* form elements */
+input, select, textarea {
+    width: 100%;
+    font-family: var(--yo-v-font-family), Helvetica, Arial, sans-serif;
+}
+
+input::-webkit-input-placeholder, input::-moz-placeholder, input::-moz-placeholder, input::-ms-input-placeholder,
+select::-webkit-input-placeholder, select::-moz-placeholder, select::-moz-placeholder, select::-ms-input-placeholder,
+textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea::-moz-placeholder, textarea::-ms-input-placeholder {
+    color: var(--yo-v-placeholder);
+    font-family: var(--yo-v-font-family), Helvetica, Arial, sans-serif;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+    visibility: hidden !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+label {
+    width: 100%;
+}
+
+.yo-v-field-wrapper {
+    margin: 24px 0;
+}
+
+.yo-v-title {
+    margin: 16px 0 8px 0;
+    text-align: left;
+    color: var(--yo-v-title);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.yo-v-input {
+    padding: 0 12px;
+    height: 40px;
+    border: 1px solid var(--yo-v-border);
+    border-radius: 5px;
+    background-color: var(--yo-v-background);
+    font-size: 16px;
+    color: var(--yo-v-text);
+}
+
+.yo-v-textarea {
+    padding: 12px;
+    border: 1px solid var(--yo-v-border);
+    border-radius: 5px;
+    background-color: var(--yo-v-background);
+    font-size: 16px;
+    color: var(--yo-v-text);
+}
+
+.form-file-select {
+    border: 1px solid var(--yo-v-border);
+    border-radius: 5px;
+    background-color: var(--yo-v-background);
+}
+
+.yo-v-label-file {
+    display: inline-block;
+    width: auto;
+}
+
+.yo-v-label-file:hover {
+    cursor: pointer;
+}
+
+.yo-v-input-file {
+    display: none;
+}
+
+/* checkbox and radio */
+.yo-v-label-group.label-inline {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.yo-v-check-label, .yo-v-radio-label {
+    margin: 0;
+    padding: 5px 30px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    color: var(--yo-v-text);
+    user-select: none;
+}
+
+.yo-v-check-label.label-inline, .yo-v-radio-label.label-inline {
+    width: auto;
+}
+
+.yo-v-check-label:checked, .yo-v-radio-label:checked {
+    color: var(--yo-v-primary-color);
+}
+
+.yo-v-check-label input, .yo-v-radio-label input {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+.yo-v-check-label input:checked ~ .yo-v-check-mark, .yo-v-radio-label input:checked ~ .yo-v-check-mark {
+    background-color: var(--yo-v-primary-color);
+    border: none;
+}
+
+.yo-v-check-label input:checked ~ .yo-v-check-mark:after, .yo-v-radio-label input:checked ~ .yo-v-check-mark:after {
+    display: block;
+}
+
+.yo-v-check-label .yo-v-check-mark, .yo-v-radio-label .yo-v-check-mark {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border: 2px solid var(--yo-v-primary-color);
+    background-color: white;
+    transform: translateY(-50%);
+}
+
+.yo-v-check-label .yo-v-check-mark {
+    border-radius: 4px;
+}
+
+.yo-v-radio-label .yo-v-check-mark {
+    border-radius: 50%;
+}
+
+.yo-v-check-label .yo-v-check-mark:after, .yo-v-radio-label .yo-v-check-mark:after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 8px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.yo-v-check-label .yo-v-check-mark-error, .yo-v-radio-label .yo-v-check-mark-error {
+    border: 0.2rem solid var(--yo-v-error);
+}
+
+.yo-v-check-text {
+    font-family: var(--yo-v-font-family), Helvetica, Arial, sans-serif;
+}
+
+.yo-v-button-submit {
+    padding: 0 40px;
+    background: var(--yo-v-primary-color);
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px
+}
+
+.yo-v-button {
+    padding: 0 20px;
+    background: var(--yo-v-primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px
+}
+
+.yo-v-select {
+    padding: 8px 24px 8px 8px;
+    border: 1px solid var(--yo-v-border);
+    border-radius: 5px;
+    background-color: var(--yo-v-background);
+    font-size: 16px;
+    color: var(--yo-v-text);
+}
+
+.yo-v-select[multiple] {
+    padding: 0;
+}
+
+.yo-v-select[multiple] .yo-v-option {
+    padding: 4px 30px 4px 12px;
+    border: none;
+}
+
+.yo-v-custom-select-wrapper {
+    height: 40px;
+    background-color: var(--yo-v-background);
+    color: var(--yo-v-text);
+    cursor: pointer;
+}
+
+.yo-v-cs-text-wrapper {
+    padding: 0 12px;
+    border: 1px solid var(--yo-v-border);
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 40px;
+    font-family: var(--yo-v-font-family), Helvetica, Arial, sans-serif;
+    user-select: none;
+}
+
+.yo-v-cs-option-list-wrapper {
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px solid var(--yo-v-border);
+    background-color: white;
+}
+
+.yo-v-cs-option-list {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.option-yo-v-cs {
+    padding: 4px 8px;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.option-yo-v-cs:hover {
+    background-color: var(--yo-v-background-grey);
+    color: var(--yo-v-text-hover);
+    font-weight: bold;
+}
+
+.option-yo-v-cs:hover, .option-yo-v-cs.selected {
+    background-color: var(--yo-v-background-grey);
+    color: var(--yo-v-text-hover);
+    font-weight: bold;
+}
+
+.yo-v-cs-selected-list {
+    margin: 4px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-yo-v-cs-selected {
+    margin: 8px 8px 0 0;
+    padding: 4px 22px 4px 6px;
+    color: white;
+    background-color: var(--yo-v-primary-color);
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.tag-yo-v-cs-selected:last-child {
+    margin: 8px 0 0 0;
+}
+
+.icon-delete-yo-v-cs-selected {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+}
+
+/* texts */
+.yo-v-field-box .yo-v-error {
+    margin: 8px 0;
+    color: var(--yo-v-error);;
+    font-weight: 600;
+}
+
+.yo-v-field-box .yo-v-error-field {
+    border: 1px solid var(--yo-v-error);
+}

@@ -1,0 +1,45 @@
+{
+  "name": "yo-validator",
+  "version": "1.0.28",
+  "description": "A form validation tool named yo-validator for Vue 3, created by Haiyi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haiyima1987/yo-validator"
+  },
+  "keywords": [
+    "form validation",
+    "validate on submit",
+    "Vue",
+    "Vue3",
+    "JavaScript"
+  ],
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.min.js",
+  "browser": {
+    "./sfc": "src/components/index.js"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "rollup --config build/rollup.config.js"
+  },
+  "author": "Haiyi",
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.2.13"
+  },
+  "dependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@vue/compiler-sfc": "^3.2.31",
+    "rollup": "^2.68.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.49.8",
+    "sass-loader": "^12.6.0",
+    "vue": "^3.2.13"
+  }
+}
